@@ -1,0 +1,6 @@
+framework module Pods_MaxEducationTask {
+  umbrella header "Pods-MaxEducationTask-umbrella.h"
+
+  export *
+  module * { export * }
+}
