@@ -40,6 +40,7 @@ class ContentView: UIView {
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
             titleLabel.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor, constant: -32)
         ])
+        print("asdasd")
     }
     
     private func configureImageView() {
