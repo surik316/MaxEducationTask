@@ -22,9 +22,9 @@
 # Результат работы
 Были использованы Kingfisher, ImageViewer.swift
 ## Лента
-<img src="https://user-images.githubusercontent.com/60616688/116003038-0e4e6c80-a605-11eb-8c2f-868759223c14.png" width="100" height="100">
+<img src="https://user-images.githubusercontent.com/60616688/116003038-0e4e6c80-a605-11eb-8c2f-868759223c14.png" width="620" height="800">
 ## Карточка
-![Simulator Screen Shot - iPhone 12 - 2021-04-25 at 20 32 51](https://user-images.githubusercontent.com/60616688/116003128-6c7b4f80-a605-11eb-9814-f0d1ee656bad.png){:height="50%" width="50%"}
+<img src="https://user-images.githubusercontent.com/60616688/116003128-6c7b4f80-a605-11eb-9814-f0d1ee656bad.png" width="620" height="800">
 ## Галерея открывается при нажатии на картинку
-![Simulator Screen Shot - iPhone 12 - 2021-04-25 at 20 33 44](https://user-images.githubusercontent.com/60616688/116003160-89178780-a605-11eb-94ea-42671d2dc9d4.png){:height="50%" width="50%"}
+<img src="https://user-images.githubusercontent.com/60616688/116003160-89178780-a605-11eb-94ea-42671d2dc9d4.png" width="620" height="800">
 
