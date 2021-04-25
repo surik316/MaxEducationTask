@@ -24,8 +24,6 @@ class ListPresenter: ListViewPresenterProtocol {
     weak var view: ListViewProtocol?
     var apiClient : NetworkServiceProtocol!
     var storageNews: ListNews?
-    
-    let defaultUrl = URL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/768px-No_image_available.svg.png")
     required init(view: ListViewProtocol, networkService: NetworkServiceProtocol) {
         self.view = view
         self.apiClient = networkService

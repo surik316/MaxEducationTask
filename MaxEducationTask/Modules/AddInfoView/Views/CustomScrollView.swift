@@ -8,6 +8,4 @@
 import Foundation
 import UIKit
 
-//class <#name#>: <#super class#> {
-//    <#code#>
-//}
+

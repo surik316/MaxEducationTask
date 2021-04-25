@@ -7,4 +7,6 @@ target 'MaxEducationTask' do
 
   # Pods for MaxEducationTask
   pod 'Kingfisher'
+  pod 'ImageViewer.swift'
+  pod 'ImageViewer.swift/Fetcher'
 end

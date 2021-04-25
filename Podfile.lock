@@ -1,16 +1,28 @@
 PODS:
+  - ImageViewer.swift (3.3.3)
+  - ImageViewer.swift/Fetcher (3.3.3):
+    - SDWebImage
   - Kingfisher (6.2.1)
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
 
 DEPENDENCIES:
+  - ImageViewer.swift
+  - ImageViewer.swift/Fetcher
   - Kingfisher
 
 SPEC REPOS:
   trunk:
+    - ImageViewer.swift
     - Kingfisher
+    - SDWebImage
 
 SPEC CHECKSUMS:
+  ImageViewer.swift: 3dbb74a68ac4bdd6cdd585b3128dae17ccd733e5
   Kingfisher: e71c6fac2aebb1262888cabc2cb13d313362a48f
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
 
-PODFILE CHECKSUM: 84fa952e9683cc5970d18baf0b5d72a30966b43a
+PODFILE CHECKSUM: d5ce5d444fbc506ec33b1c23beb69e12a4c7af6c
 
 COCOAPODS: 1.10.0

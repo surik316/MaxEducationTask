@@ -11,6 +11,7 @@ import UIKit
 protocol Builder {
     static func createListModule() -> UIViewController
     static func createAddInfoModule(modelNews: News) -> UIViewController
+    static func createGalleryModule() -> UIViewController
 }
 
 class ListBuilder: Builder{
@@ -26,6 +27,13 @@ class ListBuilder: Builder{
         let networkService = APIClient()
         let view = ListViewController()
         let presenter = ListPresenter(view: view, networkService: networkService)
+        view.presenter = presenter
+        return view
+    }
+    static func createGalleryModule() -> UIViewController {
+        let networkService = APIClient()
+        let view = GalleryViewController()
+        let presenter = GalleryPresenter(view: view, networkService: networkService)
         view.presenter = presenter
         return view
     }

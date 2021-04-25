@@ -27,6 +27,8 @@ class AddInfoViewController: UIViewController {
         scrollView.addSubview(contentView)
         contentView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.translatesAutoresizingMaskIntoConstraints = false
+        let singleTap = UITapGestureRecognizer(target: self, action: #selector(tapDetected))
+        contentView.imageView.addGestureRecognizer(singleTap)
         scrollView.showsVerticalScrollIndicator = false
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -41,9 +43,14 @@ class AddInfoViewController: UIViewController {
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
         ])
     }
+    @objc func tapDetected() {
+        let viewController = ListBuilder.createGalleryModule()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
     
 }
 extension AddInfoViewController: AddInfoViewProtocol {
+    
     func succes(model: News) {
         contentView.titleLabel.text = model.title
         if model.media.count  > 0 {

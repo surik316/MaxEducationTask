@@ -1,0 +1,6 @@
+framework module ImageViewer_swift {
+  umbrella header "ImageViewer.swift-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -40,12 +40,12 @@ class ContentView: UIView {
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32),
             titleLabel.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor, constant: -32)
         ])
-        print("asdasd")
     }
     
     private func configureImageView() {
         addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.isUserInteractionEnabled = true
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
             imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -53,6 +53,7 @@ class ContentView: UIView {
         ])
         
     }
+    
     private func configureSourceLabel() {
         addSubview(sourceLabel)
         sourceLabel.font = UIFont(name: "Helvetica", size: 12)

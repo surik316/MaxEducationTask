@@ -15,6 +15,7 @@ protocol AddInfoViewProtocol: class{
 protocol AddInfoPresenterProtocol: class {
     init(view: AddInfoViewProtocol, networkService: NetworkServiceProtocol, model: News)
     func setView()
+    var modelNews: News? {get}
 }
 
 class AddInfoPresenter: AddInfoPresenterProtocol {

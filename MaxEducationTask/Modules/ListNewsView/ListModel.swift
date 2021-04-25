@@ -52,13 +52,11 @@ struct News: Codable {
 
 // MARK: - Media
 struct Media: Codable {
-    let type, subtype, caption, copyright: String
-    let approvedForSyndication: Int
+    let copyright: String
     let mediaMetadata: [MediaMetadatum]
 
     enum CodingKeys: String, CodingKey {
-        case type, subtype, caption, copyright
-        case approvedForSyndication = "approved_for_syndication"
+        case copyright
         case mediaMetadata = "media-metadata"
     }
 }
@@ -66,6 +64,4 @@ struct Media: Codable {
 // MARK: - MediaMetadatum
 struct MediaMetadatum: Codable {
     let url: String
-    let format: String
-    let height, width: Int
 }

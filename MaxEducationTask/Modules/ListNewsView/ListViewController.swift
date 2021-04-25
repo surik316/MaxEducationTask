@@ -19,7 +19,7 @@ class ListViewController: UIViewController, UISearchBarDelegate{
         super.viewDidLoad()
         view.backgroundColor = .white
         UserDefaults.standard.setValue("GDKG2dY2WUfdgTc80eoxAdlAF3GPxC1G", forKey: "apiToken")
-        loadStocksData()
+        presenter.fetchNewsData()
         setupTableView()
         configureRefresh()
         configureNavBar()
@@ -32,11 +32,6 @@ class ListViewController: UIViewController, UISearchBarDelegate{
         refresh.tintColor = .systemBlue
         refresh.addTarget(self, action: #selector(refreshAction), for: .valueChanged)
     }
-    
-    private func loadStocksData() {
-        presenter.fetchNewsData()
-    }
-    
     func setupTableView(){
         view.addSubview(tableView)
         tableView.delegate = self
