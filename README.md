@@ -20,7 +20,7 @@
 
 После загрузки данных из API сохранять данные в локальную БД (выбор решения на усмотрение разработчика).
 # Результат работы
-Были использованы Kingfisher, ImageViewer.swift
+Pods: Kingfisher, ImageViewer.swift
 ## Лента
 <img src="https://user-images.githubusercontent.com/60616688/116003038-0e4e6c80-a605-11eb-8c2f-868759223c14.png" width="400" height="800">
 ## Карточка
