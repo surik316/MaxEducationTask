@@ -46,25 +46,16 @@ class GalleryFlowLayout: UICollectionViewFlowLayout {
         if !cache.isEmpty {
             return
         }
-        
         let numberOfItems = collectionView?.numberOfItems(inSection: 0) ?? 0
-        
         for item in 0..<numberOfItems {
             
             let indexPath:IndexPath = IndexPath(item: item, section: 0)
-            
             let columnIndex = indexPath.row % columns
             let rowIndex = indexPath.row / columns
-            
-            // create a frame for the item
             let x = CGFloat(columnIndex) * horizontalCellSpacing + (cellContentWidth * CGFloat(columnIndex))
             let y = CGFloat(rowIndex) * verticalCellSpacing + (cellContentHeight * CGFloat(rowIndex))
             
-            let itemRect = CGRect(
-                x: x,
-                y: y,
-                width: cellContentWidth,
-                height: cellContentHeight)
+            let itemRect = CGRect(x: x, y: y, width: cellContentWidth, height: cellContentHeight)
             
             let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
             attributes.frame = itemRect
@@ -73,7 +64,6 @@ class GalleryFlowLayout: UICollectionViewFlowLayout {
     }
     
     public override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
-        
         return cache[indexPath.row]
     }
     

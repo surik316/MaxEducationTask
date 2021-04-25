@@ -20,19 +20,21 @@ class ListViewController: UIViewController, UISearchBarDelegate{
         view.backgroundColor = .white
         UserDefaults.standard.setValue("GDKG2dY2WUfdgTc80eoxAdlAF3GPxC1G", forKey: "apiToken")
         presenter.fetchNewsData()
-        setupTableView()
+        configureTableView()
         configureRefresh()
         configureNavBar()
     }
     private func configureNavBar() {
         navigationItem.title = "MaximumEducation"
     }
+    
     private func configureRefresh() {
         tableView.addSubview(refresh)
         refresh.tintColor = .systemBlue
         refresh.addTarget(self, action: #selector(refreshAction), for: .valueChanged)
     }
-    func setupTableView(){
+    
+    func configureTableView() {
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
@@ -95,9 +97,9 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate{
         cell.titleLabel.text = news?.title
         var titleText = ""
         news?.desFacet.forEach({ (tag) in
-            titleText = titleText + (tag!) + ", "
+            titleText = titleText + (tag ?? "") + ", "
         })
-        cell.tagsLabel.text = titleText
+        cell.tagsLabel.text = String(titleText.dropLast(2))
         return cell
     }
 }

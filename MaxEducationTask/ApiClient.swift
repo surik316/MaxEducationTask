@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-protocol NetworkServiceProtocol{
+protocol NetworkServiceProtocol {
     func getListNewsData(completion: @escaping (Result<ListNews, Error>) -> Void)
     func getNewsImageUrlsMOK(completion: @escaping (Result<[MediaMetadatum], Error>) -> Void)
 }
@@ -18,12 +18,12 @@ class APIClient {
     private var dataTask: URLSessionDataTask?
     let decoder = JSONDecoder()
     
-    private func makeListNewsUrl() -> URL?{
+    private func makeListNewsUrl() -> URL? {
         var result = URLComponents()
         result.scheme = "https"
         result.host = "api.nytimes.com"
         result.path = "/svc/mostpopular/v2/emailed/7.json"
-        result.query = "api-key=GDKG2dY2WUfdgTc80eoxAdlAF3GPxC1G"
+        result.query = "api-key=\(UserDefaults.standard.object(forKey: "apiToken") ?? "")"
         return result.url
     }
 }
@@ -53,7 +53,7 @@ extension APIClient: NetworkServiceProtocol {
         }
         dataTask?.resume()
     }
-    func getNewsImageUrlsMOK(completion: @escaping (Result<[MediaMetadatum], Error>) -> Void){
+    func getNewsImageUrlsMOK(completion: @escaping (Result<[MediaMetadatum], Error>) -> Void) {
         let list = [
             MediaMetadatum(url: "https://cdn.searchenginejournal.com/wp-content/uploads/2018/04/businesses-need-seo-1520x800.png"),
             MediaMetadatum(url:

@@ -22,8 +22,9 @@ protocol ListViewPresenterProtocol: class {
 class ListPresenter: ListViewPresenterProtocol {
 
     weak var view: ListViewProtocol?
-    var apiClient : NetworkServiceProtocol!
+    private let apiClient : NetworkServiceProtocol!
     var storageNews: ListNews?
+    
     required init(view: ListViewProtocol, networkService: NetworkServiceProtocol) {
         self.view = view
         self.apiClient = networkService

@@ -29,7 +29,7 @@ class ContentView: UIView {
     }
     private func configureTitleLabel() {
         addSubview(titleLabel)
-        titleLabel.font = UIFont(name: "Prata-Regular", size: 40)
+        titleLabel.font = UIFont(name: "Prata-Regular", size: 20)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         titleLabel.numberOfLines = 0
@@ -99,7 +99,7 @@ class ContentView: UIView {
         copyrightLabel.font = UIFont(name: "Helvetica", size: 9)
         copyrightLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            copyrightLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -5),
+            copyrightLabel.topAnchor.constraint(equalTo: autorLabel.bottomAnchor, constant: 40),
             copyrightLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
     }

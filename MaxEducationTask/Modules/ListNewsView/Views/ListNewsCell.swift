@@ -13,6 +13,7 @@ class CustomCell: UITableViewCell {
      let newsImageView = UIImageView ()
      let titleLabel = UILabel()
      let tagsLabel = UILabel()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -53,9 +54,8 @@ class CustomCell: UITableViewCell {
             titleLabel.topAnchor.constraint(equalTo: newsImageView.topAnchor, constant: 12),
             titleLabel.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor, constant: -5)
         ])
-
     }
-
+    
     private func configureTagsLabel() {
         
         tagsLabel.font = UIFont(name: "HelveticaNeue-Thin", size: 14)

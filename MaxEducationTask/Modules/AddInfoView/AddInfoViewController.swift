@@ -23,6 +23,7 @@ class AddInfoViewController: UIViewController {
         configurescrollView()
     }
     private func configurescrollView() {
+        
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
         contentView.translatesAutoresizingMaskIntoConstraints = false
@@ -30,21 +31,31 @@ class AddInfoViewController: UIViewController {
         let singleTap = UITapGestureRecognizer(target: self, action: #selector(tapDetected))
         contentView.imageView.addGestureRecognizer(singleTap)
         scrollView.showsVerticalScrollIndicator = false
+        
         NSLayoutConstraint.activate([
             scrollView.topAnchor.constraint(equalTo: view.topAnchor),
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
+        
         NSLayoutConstraint.activate([
+            contentView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
-            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
-            contentView.heightAnchor.constraint(equalTo: scrollView.heightAnchor, constant: 300),
+            contentView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            contentView.heightAnchor.constraint(equalToConstant: 1000),
+            
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor)
         ])
     }
+    
     @objc func tapDetected() {
-        let viewController = ListBuilder.createGalleryModule()
+        var viewController = UIViewController()
+        if presenter.modelNews?.media.count ?? 0 > 0 {
+            viewController = ListBuilder.createGalleryModule(model: (presenter.modelNews?.media[0].mediaMetadata[0]) ?? MediaMetadatum(url: "https://conf.edcrunch.ru/upload/iblock/146/146d6f8212d3f70ea13ba2222b505835.png"))
+        } else {
+            viewController = ListBuilder.createGalleryModule(model: MediaMetadatum(url: "https://conf.edcrunch.ru/upload/iblock/146/146d6f8212d3f70ea13ba2222b505835.png"))
+        }
         navigationController?.pushViewController(viewController, animated: true)
     }
     
@@ -60,6 +71,7 @@ extension AddInfoViewController: AddInfoViewProtocol {
             contentView.imageView.image = UIImage(named: "bnImage")
             contentView.copyrightLabel.text = "Copyright © 2021 The New York Times Company.  All Rights Reserved"
         }
+        
         contentView.sourceLabel.text = model.source
         contentView.dateLabel.text = model.publishedDate
         contentView.descriptionLabel.text = model.abstract

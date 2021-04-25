@@ -17,6 +17,7 @@ class GalleryCell: UICollectionViewCell {
     }
     
     private func configureCell() {
+        
         addSubview(imageView)
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true

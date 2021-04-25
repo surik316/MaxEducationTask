@@ -30,7 +30,7 @@ class AddInfoPresenter: AddInfoPresenterProtocol {
         self.modelNews = model
     }
     public func setView(){
-        self.view?.succes(model: modelNews ?? News()) //сделать дефолтную модель
+        self.view?.succes(model: modelNews ?? News())
     }
 
 }

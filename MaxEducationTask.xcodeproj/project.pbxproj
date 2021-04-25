@@ -18,7 +18,6 @@
 		736FDB212634792900532732 /* AddInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736FDB202634792900532732 /* AddInfoModel.swift */; };
 		736FDB272634921100532732 /* Prata-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 736FDB262634921100532732 /* Prata-Regular.ttf */; };
 		736FDB2C2634A64D00532732 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736FDB2B2634A64D00532732 /* ContentView.swift */; };
-		736FDB312634B2B900532732 /* CustomScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736FDB302634B2B900532732 /* CustomScrollView.swift */; };
 		73C95B5C26330BDA00B5691C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C95B5B26330BDA00B5691C /* AppDelegate.swift */; };
 		73C95B6526330BDD00B5691C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73C95B6426330BDD00B5691C /* Assets.xcassets */; };
 		73C95B7426330CA600B5691C /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C95B7326330CA600B5691C /* ModuleBuilder.swift */; };
@@ -41,7 +40,6 @@
 		736FDB202634792900532732 /* AddInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInfoModel.swift; sourceTree = "<group>"; };
 		736FDB262634921100532732 /* Prata-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Prata-Regular.ttf"; sourceTree = "<group>"; };
 		736FDB2B2634A64D00532732 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		736FDB302634B2B900532732 /* CustomScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomScrollView.swift; sourceTree = "<group>"; };
 		73C95B5826330BDA00B5691C /* MaxEducationTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaxEducationTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73C95B5B26330BDA00B5691C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73C95B6426330BDD00B5691C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				736FDB2B2634A64D00532732 /* ContentView.swift */,
-				736FDB302634B2B900532732 /* CustomScrollView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -309,7 +306,6 @@
 			files = (
 				73C95B8726330D5F00B5691C /* ListPresenter.swift in Sources */,
 				736FDB2C2634A64D00532732 /* ContentView.swift in Sources */,
-				736FDB312634B2B900532732 /* CustomScrollView.swift in Sources */,
 				73C95B5C26330BDA00B5691C /* AppDelegate.swift in Sources */,
 				73051981263567DD00076F70 /* GalleryModel.swift in Sources */,
 				73C95B8A26330D6C00B5691C /* ListViewController.swift in Sources */,
